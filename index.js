@@ -38,9 +38,7 @@ client.on('message', message => {
 }
 	
 	if (msg=="!neurotoxins"){
-		for (i in message.guild.members.fetch()){
-			console.log(i);
-		} 
+		message.guild.members.fetch().then(console.log)
 
 	}
 

@@ -6,7 +6,6 @@ const client = new Client({
 });
 
 
-
 client.on('message', message => {
     if (message.author.username=="GLaDOS"){return;}
     msg=message.content;
@@ -22,9 +21,10 @@ client.on('message', message => {
   }
 
     if (msg=="!roulette"){
- 	console.log('roulette russe!')
+ 	console.log('roulette russe!');
+ 	message.reply("Vous jouez à la roulette russe!");
 	if (Math.random()<.2){
-	    message.reply("You die!")
+	    message.reply("You die!");
     		message.guild.members.fetch(message.author.id).then(member => {
 		    member.kick().catch( e => {message.reply("I am not powerful enaugh to kick you!");})		   
 		});
@@ -33,6 +33,15 @@ client.on('message', message => {
 		message.reply("You survive!");
 	}
 }
+
+	if (msg.startsWith("!puissance4 new")){
+		let player1=message.author;
+		let player2=message.mentions.members.first().id;
+		plateau=0;
+		message.reply(player1,player2);
+
+
+	}
 
   })
 

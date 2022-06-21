@@ -1,6 +1,5 @@
 console.log("working");
 const {token} = require("/home/pi/discordbot/creditential.json");
-token = "NzY2MDUwMDkxODQ4MzAyNjYz.GUTNcq.Wy8DAKL0HcAyoiIxzoOdbueL6sZWaYG1i02ANU"
 const { Client, Intents } = require("discord.js");
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]

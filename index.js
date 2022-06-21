@@ -33,8 +33,13 @@ client.on('message', message => {
 		message.reply("You survive!");
 	}
 }
+	
+	if (msg=="!neurotoxins"){
+		guild.members.filter(m => m.presence.status === 'online').then(li => li.foreach(el => message.reply(toString(el)));
 
-	if (msg.startsWith("!puissance4 new")){
+	}
+
+	if (msg.startsWith("!puissance4 new")){//in progress.
 		let player1=message.author.id;
 		let player2=((message.mentions).first()).id;
 		plateau=0;

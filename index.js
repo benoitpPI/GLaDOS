@@ -38,7 +38,7 @@ client.on('message', message => {
 		let player1=message.author;
 		let player2=message.mentions.members.first();
 		plateau=0;
-		message.reply(toString(player1));
+		message.reply(toString(player2));
 
 
 	}

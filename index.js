@@ -7,6 +7,7 @@ const client = new Client({
 
 
 client.on('message', message => {
+	guild=message.guild
     if (message.author.username=="GLaDOS"){return;}
     msg=message.content;
     msg=msg.toLowerCase();
@@ -35,7 +36,7 @@ client.on('message', message => {
 }
 	
 	if (msg=="!neurotoxins"){
-		message.guild.members.filter(m => m.presence.status === 'online').foreach(el => message.reply(toString(el)));
+		guild.members.filter(m => m.presence.status === 'online').foreach(el => message.reply(toString(el)));
 
 	}
 

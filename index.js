@@ -36,7 +36,7 @@ client.on('message', message => {
 
 	if (msg.startsWith("!puissance4 new")){
 		let player1=message.author;
-		let player2=message.mentions.members.first().id;
+		let player2=message.mentions.members.first();
 		plateau=0;
 		message.reply(tostring(player1));
 

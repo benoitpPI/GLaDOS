@@ -8,7 +8,7 @@ const client = new Client({
 
 
 
-client.on('message', message => {
+client.on('message', async message => {
 	guild=message.guild
     if (message.author.username=="GLaDOS"){return;}
     msg=message.content;

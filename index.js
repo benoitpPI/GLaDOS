@@ -35,7 +35,7 @@ client.on('message', message => {
 }
 	
 	if (msg=="!neurotoxins"){
-		message.guild.members.then(li => li.filter(m => m.presence.status === 'online').foreach(el => message.reply(toString(el))));
+		message.guild.members.filter(m => m.presence.status === 'online').foreach(el => message.reply(toString(el)));
 
 	}
 
